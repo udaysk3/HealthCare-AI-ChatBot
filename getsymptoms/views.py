@@ -92,13 +92,12 @@ def getsymptoms(req):
         symptoms =  received_json_data['queryResult']['parameters']['symptoms']
         print(symptoms)
         l = []
-        
         for symptom in symptoms:
             if '_' in symptom:
                 symptom = " ".join([i.capitalize() for i in symptom.split("_")])
                 print(symptom)
-            print(l)
-            l.append(symptom)
+            else:
+                l.append(" ".join([i.capitalize() for i in symptom.split()]))
         res = ','.join(l)
         print(res)
         # disease = predictDisease(res)
@@ -109,7 +108,8 @@ def getsymptoms(req):
                     {
                         "text": {
                             "text": [
-                            f"Hi {name}, You may be suffering with {predictDisease(res)['final_prediction']} You are adviced to take these medicines :"
+                            f"Hi {name}, You may be suffering with {predictDisease(res)['final_prediction']} You are adviced to take these medicines :\n \n",
+                            "Your health and well-being are important to me. If you're experiencing serious issues or pain, I highly recommend seeking medical attention from a doctor or hospital."
                             ]
                         }
                     }

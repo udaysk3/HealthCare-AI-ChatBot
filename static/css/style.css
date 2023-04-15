@@ -288,6 +288,7 @@ span {
   transition: 0.3s;
 }
 
+
 @media (max-width: 575px) {
   #hero .btns a {
     margin: 4px 8px;
@@ -727,7 +728,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background: url(../img/video-bg.jpg) center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
   overflow: hidden;
 }
 
@@ -1143,11 +1143,14 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 @media (max-width: 575px) {
-  #newsletter .form-control {
-    margin-bottom: 30px;
-    width: 100%;
+  .section-title h2{
+    font-size: 20px;
   }
 }
+ 
+   
+  
+    
 
 #newsletter .form-control:focus {
   border-color: #71c55d;
@@ -1163,6 +1166,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   width: 30%;
   transition: 0.3s;
 }
+
 
 @media (max-width: 575px) {
   #newsletter .btn {
@@ -1306,13 +1310,17 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background: #92d283;
 }
 
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
   background: #2a2c30;
   padding-top: 50px;
+
 }
+
+ 
 
 .footer .footer-logo .navbar-brand {
   color: #fff;
@@ -1365,4 +1373,11 @@ body.mobile-nav-active #mobile-nav-toggle i {
 .footer .copyrights p a, .footer .copyrights .credits a {
   letter-spacing: 0;
   color: #71c55d;
+}
+
+.footer .container .row{
+
+    display: flex;
+    justify-content: space-around;
+  
 }
