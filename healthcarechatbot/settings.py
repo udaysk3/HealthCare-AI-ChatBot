@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xk3nbrua()v(n$uo%uwk+q(&rm!=f3un+2j2*_91n15kzov1-x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
  
-ALLOWED_HOSTS = ['d8a8-157-47-39-109.ngrok-free.app','127.0.0.1']
+ALLOWED_HOSTS = ['c5cb-2409-4070-2bbb-367a-834-672-77af-111f.ngrok-free.app','127.0.0.1']
 
 
 # Application definition
@@ -116,7 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+
+# Make a tuple of strings instead of a string
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR , "static")
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
