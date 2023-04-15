@@ -17,7 +17,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-DATA_PATH = "C:\_My_Files\Development\Django_Workspace\HealthcareChatbot\healthcarechatbot\getsymptoms\dataset\Training.csv"
+DATA_PATH = "C:\Programming_LanguagesAndSkills\Projects\GFG_Solving_for_India\HealthCare-AI-ChatBot\getsymptoms\dataset\Training.csv"
 data = pd.read_csv(DATA_PATH).dropna(axis = 1)
 
 X = data.iloc[:,:-1]
