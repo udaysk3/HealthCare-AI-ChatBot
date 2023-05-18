@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="utf-8">
+  <title>HealthCareChatBot</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="media/favicon.png" rel="icon">
+  <link href="media/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href=" {% static 'lib/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/modal-video/css/modal-video.min.css' %}" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: HealthCareChatBot
+    Theme URL: https://bootstrapmade.com/HealthCareChatBot-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+  <style>
+    @media (max-width:  992px) {
+      #team .team-block { 
+        width: 75%;
+        margin: 2rem auto;
+        height: 80% ;
+      }
+    }
+
+    .image-prop{
+      width: 65px;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto"><span>H</span>ealthcareChatBot</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="media/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#bot">Chatbot</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#technologies">Technologies Used</a></li>
+      <li><a href="#team">Team</a></li>
+      
+      <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero" class="wow fadeIn">
+    <div class="hero-container mt-2">
+      <h1>Welcome to HealthCareChatBot</h1>
+      <h2>Disease prediction from Symptoms and medical advicing and &amp; more... :)</h2>
+      <img src="{% static 'media/hero.png' %}" width="950px" style="border-radius : 50px;" alt="Hero Imgs">
+      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
+      <div class="btns">
+        <a href="https://t.me/healthcurebot" target="_blank"><i class="fa fa-telegram fa-3x"></i> Telegram</a>
+        <a href="#" style="
+          pointer-events: none;
+          cursor: default;
+       "><i class="fa fa-google fa-3x"></i> Google Assistant <sub> (Coming Soon) </sub> </a>
+      </div>
+    </div>
+  </section><!-- #hero -->
+
+  <!--==========================
+    Get Started Section
+  ============================-->
+  <section id="get-started" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Say Hello to Kitty! Your Healthcare chatbot </h2>
+        <p class="separator">A project for solving for india hackathon</p>
+
+      </div>
+    </div>
+
+    <div class="container bot" id="bot">
+      <div class="row">
+     
+        {% comment %} here comes our chatbot {% endcomment %}
+        <iframe class="bot"
+    allow="microphone;"
+    width="75%"
+    height="500"
+    style="margin : 0 auto 5rem auto; border-radius: 33px; border:none;
+    background: #e0e0e0;
+    box-shadow:  13px 13px 54px #848484,
+                 -13px -13px 54px #ffffff;"
+    src="https://console.dialogflow.com/api-client/demo/embedded/3f6c7fdb-ebc9-485e-92c0-dd5119b50f82">
+</iframe>
+      
+        
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!--==========================
+    Features Section
+  ============================-->
+
+  <section id="features" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Amazing Features.</h2>
+        <p class="separator">Major features of this project</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+     
+        
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{% static 'media/svg/design-tool.svg' %}" alt="img" class="img-fluid image-prop">
+            <h4>easy to use</h4>
+            <p>This chatbot is very easy to use and simple to start a conversation</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="https://www.pngitem.com/pimgs/m/401-4019670_machine-learning-model-png-transparent-png.png" alt="img" class="img-fluid">
+            <h4>Trained ML Model</h4>
+            <p>This is an AI Model which learns from the user's input and upgrades day by day</p>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{% static 'media/disease.jpg' %}" alt="img" class="img-fluid">
+            <h4>Symptom-Disease Prediction</h4>
+            <p>This chatbot predicts the disease based on the user's Symptoms.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{% static 'media/disease_pred.avif' %}" alt="img" class="img-fluid image-prop">
+            <h4>Disease prevention and medication</h4>
+            <p>Precautions are provided to prevent the disease and provide respective medication steps.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="technologies" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Technologies Used</h2>
+        <p class="separator">These were the technologies used to build this project</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{% static 'media/dialogflow.png' %}" alt="img" class="img-fluid image-prop">
+            <h4>DialogFlow</h4>
+            <p>The conversation flow is built using the dialogflow</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src=" {% static 'media/django.png' %} " alt="img" class="img-fluid image-prop">
+            <h4>Django</h4>
+            <p>The project website is made using the Django(python) Framework</p>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{% static 'media/NLP.webp' %}" alt="img" class="img-fluid image-prop">
+            <h4>Deep Learning</h4>
+            <p>This chatbot uses Deep Learning to predict the disease based on the user's Symptoms and Precautions are provided to prevent the disease and provides respective medication steps.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{% static 'media/gcloud.png' %}" alt="img" class="img-fluid image-prop">
+            <h4>Cloud services</h4>
+            <p>This chatbot is deployed on Google Cloud Platform and AMD instances were launched.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--==========================
+    Team Section
+  ============================-->
+  <section id="team" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Team Members</h2>
+        <p class="separator">Team members for the hackathon</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="{% static 'media/team/1.png' %}" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <span>Developer</span>
+              <h4>B.Udaysantoshkumar</h4>
+            </div>
+          </div>
+        </div>
+
+       <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="{% static 'media/team/2.png' %}" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <span>ML Model Trainer</span>
+              <h4>Dhanunjaya rao</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="{% static 'media/team/pradeep.png' %}" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <span>Machine Learning Expert</span>
+              <h4>Pradeep Behara</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="{% static 'media/team/4.png' %}" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <span>Developer</span>
+              <h4>Hemanth Kumar</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+ 
+  <!--==========================
+    Contact Section
+  ============================-->
+  <section id="contact" class="padd-section wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Contact</h2>
+        <p class="separator">Regarding projects</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-lg-3 col-md-4">
+
+          <div class="info">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p>Lendi Institute Of Engineering and Technology<br>Jonnada, VZM 535002</p>
+            </div>
+
+            <div class="email">
+              <i class="fa fa-envelope"></i>
+              <p>udaysk963@gmail.com</p>
+            </div>
+
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 9705795884</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/geeksforgeeks_liet/" target='blank' class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/geeksforgeeks-liet/" target='blank' class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div>
+
+        </div>
+
+        <div class="col-lg-5 col-md-8">
+          <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="mailto:burluudaysantoshkumar3@gmail.com" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #contact -->
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">HealthCareChatBot</a>
+            <p>This chatbot uses Deep Learning to predict the disease based on the user's Symptoms and Precautions are provided to prevent the disease and provides respective medication steps.</p>
+
+          </div>
+        </div>
+
+      
+
+
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Modules</h4>
+
+            <ul class="list-unstyled">
+              <li class="menu-active"><a href="#hero">Home</a></li>
+              <li><a href="#bot">Chatbot</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#technologies">Technologies Used</a></li>
+          <li><a href="#team">Team</a></li>
+          
+          <li><a href="#contact">Contact</a></li>
+              
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights HealthCareChatBot. All rights reserved.</p>
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=HealthCareChatBot
+          -->
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+ 
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/modal-video/js/modal-video.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
