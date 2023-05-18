@@ -87,17 +87,18 @@ def getsymptoms(req):
         print(req)
         received_json_data=json.loads(req.body)
         print(received_json_data)
+        feeling  =  received_json_data['queryResult']['parameters']['feeling']
         symptoms =  received_json_data['queryResult']['parameters']['symptoms']
         print(symptoms)
         res = ''
         if len(symptoms) == 1:
-            res = randomforest(symptoms[0])
+            res = randomforest(symptoms[0],feeling)
         elif len(symptoms) == 2:
-            res = randomforest(symptoms[0], symptoms[1])
+            res = randomforest(symptoms[0], symptoms[1],feeling)
         elif len(symptoms) == 3:
-            res = randomforest(symptoms[0], symptoms[1], symptoms[2])
+            res = randomforest(symptoms[0], symptoms[1], symptoms[2],feeling)
         elif len(symptoms) == 4:
-            res = randomforest(symptoms[0], symptoms[1], symptoms[2], symptoms[3])
+            res = randomforest(symptoms[0], symptoms[1], symptoms[2], symptoms[3],feeling)
         elif len(symptoms) == 5:
             res = randomforest(symptoms[0], symptoms[1], symptoms[2], symptoms[3], symptoms[4])
         print(res)
