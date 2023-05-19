@@ -3,7 +3,7 @@ from django.http import HttpResponse,JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
 from .newPythonCodeOfAlgorithm import randomforest
-from .daignosis import diag
+from .diagnosis import diag
 
 # import joblib
 # import numpy as np
