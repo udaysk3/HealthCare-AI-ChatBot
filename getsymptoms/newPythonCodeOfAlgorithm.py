@@ -44,7 +44,7 @@ disease=['Fungal infection','Allergy','GERD','Chronic cholestasis','Drug Reactio
 l2=[]
 for i in range(0,len(l1)):
     l2.append(0)
-# print(l2)
+print(l2)
 
 #Reading the training .csv file
 df=pd.read_csv("getsymptoms/training.csv")
@@ -68,12 +68,12 @@ df.head()
 X= df[l1]
 y = df[["prognosis"]]
 np.ravel(y)
-# print(X)
-# print(y)
+print(X)
+print(y)
 
 
 #Reading the  testing.csv file
-tr=pd.read_csv("getsymptoms/training.csv")
+tr=pd.read_csv("getsymptoms/testing.csv")
 
 tr.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic cholestasis':3,'Drug Reaction':4,
     'Peptic ulcer diseae':5,'AIDS':6,'Diabetes ':7,'Gastroenteritis':8,'Bronchial Asthma':9,'Hypertension ':10,
@@ -92,11 +92,12 @@ tr.head()
 X_test= tr[l1]
 y_test = tr[["prognosis"]]
 np.ravel(y_test)
+print(X_test)
+print(y_test)
 
-list1 = df['prognosis'].unique()
 
 
-def randomforest(s1,s2,s3=None,s4=None, s5=None):
+def randomforest(Symptom1,Symptom2,Symptom3=None,Symptom4=None,Symptom5=None):
     from sklearn.ensemble import RandomForestClassifier
     clf4 = RandomForestClassifier(n_estimators=100)
     clf4 = clf4.fit(X,np.ravel(y))
@@ -104,15 +105,15 @@ def randomforest(s1,s2,s3=None,s4=None, s5=None):
     # calculating accuracy 
     from sklearn.metrics import classification_report,confusion_matrix,accuracy_score
     y_pred=clf4.predict(X_test)
-    # print("Random Forest")
-    # print("Accuracy")
-    # print(accuracy_score(y_test, y_pred))
-    # print(accuracy_score(y_test, y_pred,normalize=False))
-    # print("Confusion matrix")
-    # conf_matrix=confusion_matrix(y_test,y_pred)
-    # print(conf_matrix)
+    print("Random Forest")
+    print("Accuracy")
+    print(accuracy_score(y_test, y_pred))
+    print(accuracy_score(y_test, y_pred,normalize=False))
+    print("Confusion matrix")
+    conf_matrix=confusion_matrix(y_test,y_pred)
+    print(conf_matrix)
 
-    psymptoms = [s1,s2,s3,s4,s5]
+    psymptoms = [Symptom1,Symptom2,Symptom3,Symptom4,Symptom5]
 
     for k in range(0,len(l1)):
         for z in psymptoms:
@@ -131,6 +132,4 @@ def randomforest(s1,s2,s3=None,s4=None, s5=None):
     if (h=='yes'):
         return disease[a]
     else:
-        return "Not found in records"
-
-
+        return "Not Found"
