@@ -64,7 +64,7 @@ df.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic chol
 
 #printing the top 5 rows of the training dataset
 df.head()
-
+    
 X= df[l1]
 y = df[["prognosis"]]
 np.ravel(y)
