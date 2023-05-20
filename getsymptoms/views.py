@@ -92,13 +92,13 @@ def getsymptoms(req):
         print(symptoms)
         res = ''
         if len(symptoms) == 1:
-            res = randomforest(symptoms[0],feeling)
+            res = randomforest(symptoms[0])
         elif len(symptoms) == 2:
-            res = randomforest(symptoms[0], symptoms[1],feeling)
+            res = randomforest(symptoms[0], symptoms[1])
         elif len(symptoms) == 3:
-            res = randomforest(symptoms[0], symptoms[1], symptoms[2],feeling)
+            res = randomforest(symptoms[0], symptoms[1], symptoms[2])
         elif len(symptoms) == 4:
-            res = randomforest(symptoms[0], symptoms[1], symptoms[2], symptoms[3],feeling)
+            res = randomforest(symptoms[0], symptoms[1], symptoms[2], symptoms[3])
         elif len(symptoms) == 5:
             res = randomforest(symptoms[0], symptoms[1], symptoms[2], symptoms[3], symptoms[4])
         print(res)
