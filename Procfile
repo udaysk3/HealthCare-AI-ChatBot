@@ -1,1 +1,1 @@
-web: gunicorn 'HealthCare-AI-Chatbot.wsgi'
+web: gunicorn 'HealthCare-AI-ChatBot.wsgi'
