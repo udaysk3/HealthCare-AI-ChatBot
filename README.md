@@ -94,8 +94,6 @@ help shorten wait times for doctor's appointments. There is no need for patients
 <h3>BACKEND :</h3>
 <hr>
 <ul>
-  <li>Google Maps API</li>
-  <li>Google Calendar API</li>
   <li>Google TensorFlow , Other ML Services</li>
   <li>FIREBASE</li>
   <li>Dialog Flow API</li>
